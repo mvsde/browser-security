@@ -10,9 +10,14 @@ Grant access to resources on a different origin, applies to:
 * Images and video frames in canvas
 * CSS Shapes from images
 
-![Same-origin requests vs cross-origin requests.](img/cors-principle.png)
-
-_Image source: MDN_
+```txt
+┌───────────────┐   same-origin
+│               │ ────────────────▶  example.com/styles.css
+│    Website    │
+│  example.com  │
+│               │ ────────────────▶  cdn.com/scripts.js
+└───────────────┘   cross-origin
+```
 
 ## Example
 
