@@ -11,7 +11,7 @@ Content-Security-Policy:
     # Allow content from current origin
     default-src 'self';
 
-    # Allow all images
+    # Allow images from all origins
     img-src *;
 
     # Allow audio and video from media.example.com
@@ -20,7 +20,7 @@ Content-Security-Policy:
     # Allow JS from scripts.example.com
     script-src scripts.example.com;
 
-    # Report violations
+    # Report violations to this URL
     report-uri https://csp.example.com
 ```
 
@@ -30,6 +30,7 @@ Content-Security-Policy:
 
 ```ini
 content-security-policy:
+    # Allow content from current origin and a list of cross-origins
     default-src
         'self'
         *.ing.de
@@ -47,7 +48,7 @@ content-security-policy:
 
 ```ini
 content-security-policy:
-    # Allow scripts from current origin and a few third-parties
+    # Allow scripts from current origin and a list of cross-origins
     script-src
         'self'
         https://production.haystack-assets.com
@@ -57,17 +58,18 @@ content-security-policy:
         hcaptcha.com
         *.hcaptcha.com;
 
-    # Block legacy features that may not have <iframe>'s security
+    # Block legacy features that don't have <iframe>'s security
     object-src 'none';
 
     # Block <base> element
     base-uri 'none';
 
-    # Restrict ofrm action URLs
+    # Restrict form action URLs
     form-action 'self';
 
     # Disallow embedding
     frame-ancestors 'none';
 
+    # Report violations to this URL
     report-uri https://sentry.io/api/…
 ```
