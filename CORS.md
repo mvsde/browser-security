@@ -21,7 +21,7 @@ Grant access to resources on a different origin, applies to:
 
 ## Example
 
-### Block all cross origins
+### Block all cross-origin requests
 
 No `Access-Control-Allow-Origin` specified.
 
@@ -31,11 +31,11 @@ fetch('https://app.n26.com')
 
 ![CORS blocked a cross-origin request.](img/cors-blocked.png)
 
-### Allow specific origin
+### Allow requests from specific origin
 
 `Access-Control-Allow-Origin: https://example.com`
 
-### Allow all origins
+### Allow all cross-origin requests
 
 `Access-Control-Allow-Origin: *`
 
