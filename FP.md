@@ -16,13 +16,14 @@ feature-policy:
     # Allow camera for current origin
     camera 'self';
 
-    # Allow content from example.com to enter fullscreen
+    # Allow fullscreen for content from example.com
     fullscreen https://example.com
 ```
 
 ### iframe
 
 ```html
+<!-- Allow fullscreen and PiP for this iframe -->
 <iframe
     src="https://example.com/video"
     allow="fullscreen; picture-in-picture"
