@@ -26,3 +26,15 @@ Verify that resources are delivered without manipulation.
     crossorigin="anonymous"
 >
 ```
+
+## `crossorigin` attribute
+
+[Documentation on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/crossorigin)
+
+| Keyword           | Description                                                        |
+| ----------------- | ------------------------------------------------------------------ |
+| `anonymous`       | Credentials set to `same-origin`, no exchange unless same origin   |
+| `use-credentials` | Credentials set to `include`, include credentials for cross origin |
+| `""`              | Same as `anonymous`                                                |
+
+Credentials: Cookies, HTTP authentication
